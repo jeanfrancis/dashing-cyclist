@@ -1,0 +1,19 @@
+-# This is a dashboard in itself, so place it in the dashboards/ directory and
+-# configure the cycler below
+
+%script{src: "/assets/cycler.js", type: "text/javascript"}
+
+:javascript
+  new Cycler({
+    // Boards to cycle through
+    boards: ['board-one', 'board-two', 'board-three'],
+
+    // How long to stay on each board, in seconds
+    duration: 10
+
+    // Initial delay before showing first board on first load, in seconds
+    initialDelay: 0
+
+    width: 1920
+    height: 1080
+  });
