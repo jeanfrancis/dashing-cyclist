@@ -5,16 +5,15 @@
 
 :javascript
   new Cycler({
-    // Boards to cycle through
+    // Board paths to cycle through
     boards: ['board-one', 'board-two', 'board-three'],
 
     // How long to stay on each board, in seconds
     duration: 10
 
-    // Initial delay before showing the first board, when the cycle board
-    // is viewed for the first time. Since loading can sometimes take a
-    // while, this can be used to hide the ugliness.
-    initialDelay: 0
+    // By default, we only load the current board and the next one, to improve
+    // performance. By setting this to true, all boards can be loaded at once
+    loadAll: false
 
     width: 1920
     height: 1080
