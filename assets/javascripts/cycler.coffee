@@ -19,12 +19,17 @@ class @Cycler
     $('body, #container').css
       margin: 0
       padding: 0
+      overflow: 'hidden'
 
     # Create the container
     @$container =
       $('<div />',
         id: 'cycler-boards'
-      ).appendTo 'body'
+      ).css(
+        width: @width
+        height: @height
+        overflow: 'hidden'
+      ).appendTo '#container'
 
     # If loadAll is enabled, create all the boards right away
     if @loadAll
