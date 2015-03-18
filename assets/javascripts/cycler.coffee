@@ -3,6 +3,8 @@
 
 class @Cycler
 
+  $ = jQuery
+
   constructor: (options) ->
     @boards = options.boards or []
     @duration = options.duration or 10
